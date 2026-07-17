@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: n8n-config
+  namespace: n8n
+  labels:
+    app: n8n
+    component: config
+data:
+  # Timezone
+  GENERIC_TIMEZONE: "Asia/Kuala_Lumpur"
+  
+  # n8n Configuration
+  N8N_LOG_LEVEL: "debug"
+  N8N_BLOCK_ENV_ACCESS_IN_NODE: "true"
+  N8N_GIT_NODE_DISABLE_BARE_REPOS: "true"
+  N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+  N8N_RUNNERS_ENABLED: "true"
+  N8N_PROXY_HOPS: "1"
+  N8N_SECURE_COOKIE: "false"
+  
+  # Host/Webhook (can be patched per environment)
+  N8N_HOST: "n8n.jcchiew.com"
+  WEBHOOK_URL: "https://n8n.jcchiew.com"
+  
+  # SMTP (non-sensitive)
+  N8N_SMTP_HOST: "smtp.gmail.com"
+  N8N_SMTP_PORT: "587"
+  N8N_SMTP_USER: "jingcheng070@gmail.com"
+  N8N_SMTP_SENDER: "noreply@jcchiew.com"
+  N8N_SMTP_SSL: "false"
+  N8N_EMAIL_MODE: "smtp"
+  N8N_EMAIL_FROM: "noreply@jcchiew.com"
+  
+  # Database (Supabase PostgreSQL)
+  DB_TYPE: "postgresdb"
+  DB_POSTGRESDB_HOST: "aws-0-ap-southeast-1.pooler.supabase.com"
+  DB_POSTGRESDB_DATABASE: "postgres"
+  DB_POSTGRESDB_PORT: "6543"
+  DB_POSTGRESDB_USER: "postgres.xpbxtvijmrhntelebyyb"
+  DB_POSTGRESDB_SCHEMA: "n8n_backend"
+
+
+  # # Force n8n to enable default CORS middleware
+  # N8N_DEFAULT_CORS: "true"
+  # # Allow access from specific frontends (Recommended)
+  # # N8N_CORS_ALLOW_ORIGIN: "https://yourfrontenddomain.com"
+
+  # # Alternatively, allow all domains for testing/public endpoints
+  # N8N_CORS_ALLOW_ORIGIN: "*"
+
