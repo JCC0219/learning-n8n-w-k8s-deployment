@@ -34,12 +34,22 @@ data:
   
   # Database (Supabase PostgreSQL)
   DB_TYPE: "postgresdb"
-  DB_POSTGRESDB_HOST: "aws-0-ap-southeast-1.pooler.supabase.com"
-  DB_POSTGRESDB_DATABASE: "postgres"
-  DB_POSTGRESDB_PORT: "6543"
-  DB_POSTGRESDB_USER: "postgres.xpbxtvijmrhntelebyyb"
-  DB_POSTGRESDB_SCHEMA: "n8n_backend"
 
+  #Supabase Cloud
+  # DB_POSTGRESDB_HOST: "aws-0-ap-southeast-1.pooler.supabase.com"
+  # DB_POSTGRESDB_DATABASE: "postgres"
+  # DB_POSTGRESDB_PORT: "6543"
+  # DB_POSTGRESDB_USER: "postgres.xpbxtvijmrhntelebyyb"
+  # DB_POSTGRESDB_SCHEMA: "n8n_backend"
+
+  #Supabase Self-Hosted
+  DB_POSTGRESDB_HOST: 'cluster-dev-pooler-rw.database-dev.svc.cluster.local'
+  DB_POSTGRESDB_PORT: '5432'
+  DB_POSTGRESDB_USER: 'postgres'
+  DB_POSTGRESDB_DATABASE: "postgres"
+  DB_POSTGRESDB_SCHEMA: "jc_n8n_backend"
+
+  
   # Database Pool Size
   DB_POSTGRESDB_POOL_SIZE: "20"
   # Database Execution Data Pruning
